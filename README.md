@@ -1,4 +1,4 @@
-<img src="icon.png" align="right" height="400" width="492"/>
+<img src="icon.png" align="right" height="286" width="352"/>
 
 # NetRender
 > Script to render interactive brain networks in three-dimensional space
