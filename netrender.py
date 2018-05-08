@@ -22,13 +22,30 @@ def render_network():
     pass
 
 
+def run_test(case):
+    """
+    Run one of the pre-made test cases when the -t option is passed from the command line.
+    :param case: Choice for test to run, should be pre-validated through command line.
+    """
+    if case == 'mouse':
+        print('testing ' + case)
+    elif case == 'cat':
+        print('testing ' + case)
+    elif case == 'macaque':
+        print('testing ' + case)
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('filename')
-    parser.add_argument('-v', '--verbose', help='increase output verbosity', action='store_true')
-    parser.add_argument('-c', '--color', help='change color scale of network', type=str)
+    parser.add_argument('filename', nargs='?')
+    parser.add_argument('-v', help='increase output verbosity', action='store_true')
+    parser.add_argument('-c', help='change color scale of network', type=str, choices=['red', 'green', 'blue'])
+    parser.add_argument('-t', help='test program on an existing connectome', choices=['mouse', 'cat', 'macaque'])
     args = parser.parse_args()
-    print(args.color)
+    if args.t is not None:
+        run_test(args.t)
+    else:
+        print(args.c)
 
 
 if __name__ == '__main__':
