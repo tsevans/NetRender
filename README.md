@@ -7,13 +7,12 @@ I wrote this script in Spring 2018 while taking [CS 4984: Computing The Brain](h
 This project allows users to render interactive 3D networks in their browser using Python without excessive dependencies. My goal is that future CS 4984 can use this program to help understand their assignments and make cool images for presentations.
 
 ## Table of Contents
-
-    * [Installation](#installation)
-        - [Dependencies](#dependencies)
-    * [Usage](#usage)
-        - [Input Format](#input-format)
-        - [Command-Line Options](#command-line-options)
-        - [Saving Networks](#saving-networks)
+  * [Installation](#installation)
+    - [Dependencies](#dependencies)
+  * [Usage](#usage)
+    - [Input Format](#input-format)
+    - [Command-Line Options](#command-line-options)
+    - [Saving Networks](#saving-networks)
 
 ## Installation
 
