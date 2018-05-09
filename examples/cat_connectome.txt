@@ -1,4 +1,3 @@
-#tail	head	edge_weight
 0	1	3
 0	2	3
 0	3	1
