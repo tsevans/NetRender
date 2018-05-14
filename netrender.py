@@ -49,8 +49,6 @@ def process_input(input_path):
     # Get definite list of vertices
     vertices = vertex_map.keys()
 
-    print(idx)
-
     # Print graph information
     print(str(len(vertices)) + ' vertices')
     print(str(len(edges)) + ' edges')
@@ -77,10 +75,14 @@ def render_network(graph, color_scale, vertices):
     for v in vertices:
         c = ColorHash(v)
         color = 'rgb('
-        if color_scale is not None:
-            pass
-        else:
+        if color_scale is None:
             color += '%s,%s,%s)' % tuple(c.rgb)
+        elif color_scale == 'red':
+            color += '255,%s,%s)' % (c.rgb[1], c.rgb[2])
+        elif color_scale == 'green':
+            color += '%s,255,%s)' % (c.rgb[0], c.rgb[2])
+        elif color_scale == 'blue':
+            color += '%s,%s,255)' % (c.rgb[0], c.rgb[1])
         colors.append(color)
 
     # Build plot.ly trace for vertices
