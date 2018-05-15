@@ -22,13 +22,16 @@ This project allows users to render interactive 3D networks in their browser usi
 
 ### Input Format
 The input for the program is a standard edge list file following the usual format 'src_node  dst_node  weight' on each line of the file. The program can accept as input a .txt file, with either tab-delimited or space-delimited values, or a .csv file following the aforementioned format.
+
 One important thing to note is that the program does not currently account for column headers in input files. Shown below are examples of incorrect and correct input files with headers and without headers, respectively:
 
 Incorrect:
-![incorrect](images/bad_input_file.png)
+
+![incorrect](images/bad_input_file.png =184x160)
 
 Correct:
-![correct](images/good_input_file.png)
+
+![correct](images/good_input_file.png =184x160)
 
 ### Command-Line Options
 
