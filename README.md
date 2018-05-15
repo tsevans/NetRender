@@ -27,11 +27,11 @@ One important thing to note is that the program does not currently account for c
 
 Incorrect:
 
-![incorrect](images/bad_input_file.png =184x160)
+<img src="images/bad_input_file.png" width="184" height="160">
 
 Correct:
 
-![correct](images/good_input_file.png =184x160)
+<img src="images/good_input_file.png" width="184" height="160">
 
 ### Command-Line Options
 
