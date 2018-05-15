@@ -25,13 +25,10 @@ The input for the program is a standard edge list file following the usual forma
 
 One important thing to note is that the program does not currently account for column headers in input files. Shown below are examples of incorrect and correct input files with headers and without headers, respectively:
 
-Incorrect:
+*Incorrect:*                    *Correct:*
 
-<img src="images/bad_input_file.png" width="184" height="160">
+<img src="images/bad_input_file.png" width="184" height="160">                    <img src="images/good_input_file.png" width="184" height="160">
 
-Correct:
-
-<img src="images/good_input_file.png" width="184" height="160">
 
 ### Command-Line Options
 
