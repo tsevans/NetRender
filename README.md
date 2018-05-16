@@ -27,7 +27,7 @@ One important thing to note is that the program does not currently account for c
 
 *Incorrect:*                                                    |  *Correct:*
 :--------------------------------------------------------------:|:--------------------------------------------------------------:
-<img src="images/bad_input_file.png" width="184" height="160">  |  <img src="images/good_input_file.png" width="184" height="160">
+<img src="images/bad_input_file.png">  |  <img src="images/good_input_file.png">
 
 
 ### Command-Line Options
