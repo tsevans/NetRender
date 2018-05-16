@@ -15,9 +15,13 @@ This project allows users to render interactive 3D networks in their browser usi
     - [Examples](#examples)
     - [Saving Networks](#saving-networks)
 
+
+
 ## Installation
 
 ### Dependencies
+
+
 
 ## Usage
 
@@ -31,9 +35,14 @@ One important thing to note is that the program does not currently account for c
 <img src="images/bad_input_file.png">  |  <img src="images/good_input_file.png">
 
 
+
 #### Command-Line Options
+
+
 
 #### Examples
 There are three example networks you can use to test this program.
+
+
 
 #### Saving Networks
