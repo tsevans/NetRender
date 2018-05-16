@@ -29,13 +29,6 @@ One important thing to note is that the program does not currently account for c
 :--------------------------------------------------------------:|:--------------------------------------------------------------:
 <img src="images/bad_input_file.png" width="184" height="160">  |  <img src="images/good_input_file.png" width="184" height="160">
 
-*Incorrect:*                    *Correct:*
-
-<p float="left">
-  <img src="images/bad_input_file.png" width="184" height="160">
-  <img src="images/good_input_file.png" width="184" height="160">
-</p>
-
 
 ### Command-Line Options
 
