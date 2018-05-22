@@ -1,7 +1,7 @@
 import sys
 import argparse
+from binascii import crc32
 import igraph as ig
-from colorhash import ColorHash
 import plotly.offline as py
 from plotly.graph_objs import *
 
@@ -60,6 +60,76 @@ def process_input(input_path):
     return graph, vertices
 
 
+def hash_colors(vertex):
+    """
+    Generate a unique color for a vertex based on it's hashed name.
+    :param vertex: The vertex to generate a color for.
+    :return: Tuple of (R, G, B) color values for the vertex.
+    """
+
+    def calculate_colors(v):
+        """
+        Calculate the color for name of the given vertex v.
+        :param v: Name of vertex to be hashed.
+        :return: Tuple of (hue, saturation, lightness) values.
+        """
+
+        # Define constant color values
+        lightness = [0.35, 0.5, 0.65]
+        saturation = [0.35, 0.5, 0.65]
+
+        # Calculate the CRC-32 checksum of colors encoded as a UTF-8 string
+        hash = crc32(str(v).encode('utf-8')) & 0xffffffff
+
+        # Calculate the HSL (hue, saturation, lightness) values for the vertices
+        hue = ((hash % 359) / 1000) * 360
+        hash //= 360
+        sat = saturation[hash % len(saturation)]
+        hash //= len(saturation)
+        lig = lightness[hash % len(lightness)]
+
+        return (hue, sat, lig)
+
+    def hsl_to_rgb(hsl):
+        """
+        Convert HSL color value into RGB.
+        :param hsl: HSL values for given vertex.
+        :return: Tuple of (R, G, B) colors for vertex.
+        """
+        try:
+            h, s, l = hsl
+        except TypeError:
+            raise ValueError(hsl)
+        try:
+            h /= 360
+            q = l * (1 + s) if l < 0.5 else l + s - l * s
+            p = 2 * l - q
+        except TypeError:
+            raise ValueError(hsl)
+
+        rgb = []
+        for c in (h + 1 / 3, h, h - 1 / 3):
+            if c < 0:
+                c += 1
+            elif c > 1:
+                c -= 1
+
+            if c < 1 / 6:
+                c = p + (q - p) * 6 * c
+            elif c < 0.5:
+                c = q
+            elif c < 2 / 3:
+                c = p + (q - p) * 6 * (2 / 3 - c)
+            else:
+                c = p
+            rgb.append(round(c * 255))
+
+        return tuple(rgb)
+
+    raw_hsl = calculate_colors(vertex)
+    return hsl_to_rgb(raw_hsl)
+
+
 def render_network(graph, color_scale, vertices):
     """
     Render network in three-dimensional space.
@@ -73,16 +143,16 @@ def render_network(graph, color_scale, vertices):
     # Generate colors for each vertex based on hash value of their names
     colors = []
     for v in vertices:
-        c = ColorHash(v)
+        c = hash_colors(v)
         color = 'rgb('
         if color_scale is None:
-            color += '%s,%s,%s)' % tuple(c.rgb)
+            color += '%s,%s,%s)' % tuple(c)
         elif color_scale == 'red':
-            color += '255,%s,%s)' % (c.rgb[1], c.rgb[2])
+            color += '255,%s,%s)' % (c[1], c[2])
         elif color_scale == 'green':
-            color += '%s,255,%s)' % (c.rgb[0], c.rgb[2])
+            color += '%s,255,%s)' % (c[0], c[2])
         elif color_scale == 'blue':
-            color += '%s,%s,255)' % (c.rgb[0], c.rgb[1])
+            color += '%s,%s,255)' % (c[0], c[1])
         colors.append(color)
 
     # Build plot.ly trace for vertices
@@ -157,10 +227,18 @@ def run_test(case):
 def main():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('filename', nargs='+')
-    parser.add_argument('-t', help='test program on an existing connectome', choices=['mouse', 'cat', 'macaque'])
-    parser.add_argument('-v', help='increase output verbosity', action='store_true')
-    parser.add_argument('-c', help='change color scale of network', type=str, choices=['red', 'green', 'blue'])
+    parser.add_argument('filename',
+                        nargs='+')
+    parser.add_argument('-t',
+                        help='test program on an existing connectome',
+                        choices=['mouse', 'cat', 'macaque'])
+    parser.add_argument('-v',
+                        help='increase output verbosity',
+                        action='store_true')
+    parser.add_argument('-c',
+                        help='change color scale of network',
+                        type=str,
+                        choices=['red', 'green', 'blue'])
     args = parser.parse_args()
     if args.t is not None:
         print(args.t)
