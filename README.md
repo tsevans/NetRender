@@ -19,10 +19,12 @@ This project allows users to render interactive 3D networks in their browser usi
 <br>
 
 ## Installation
-Installation is as simple as cloning this repository with the command `git clone https://github.com/tsevans/NetRender.git`.
+To install, simply clone this repository using the following command: 
+```
+git clone https://github.com/tsevans/NetRender.git
+```
 
 If you do not already have Python on your computer, you'll want to download the latest version [here](https://www.python.org/downloads/). I'm using version 3.6.5.
-
 
 
 
@@ -30,7 +32,7 @@ If you do not already have Python on your computer, you'll want to download the 
 
 ## Usage
 
-#### Input Format
+### Input Format
 The input for the program is a standard edge list file following the usual format [`src_node` `dst_node` `weight`] on each line of the file. The program can accept as input a .txt file, with either tab-delimited or space-delimited values, or a .csv file following the aforementioned format.
 
 One important thing to note is that the program does not currently account for column headers in input files. Shown below are examples of incorrect and correct input files with headers and without headers, respectively:
@@ -43,15 +45,23 @@ If your input file has column headers, you'll want to delete them to avoid extra
 
 <br>
 
-#### Command-Line Options
+### Command-Line Options
 
 
 <br>
 
-#### Examples
+### Examples
 There are three example networks you can use to test this program.
 
+* **cat_connectome.txt**
+    * [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512)
+    
+* **macaque_connectome.txt**
+    * [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512)
+    
+* **mouse_connectome.txt**
+    * [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf)
 
 <br>
 
-#### Saving Networks
+### Saving Networks
