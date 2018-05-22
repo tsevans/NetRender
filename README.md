@@ -14,7 +14,6 @@ This project allows users to render interactive 3D networks in their browser usi
     - [Input Format](#input-format)
     - [Command-Line Options](#command-line-options)
     - [Examples](#examples)
-    - [Saving Networks](#saving-networks)
 
 <br>
 
@@ -23,10 +22,9 @@ To install, simply clone this repository using the following command:
 ```
 git clone https://github.com/tsevans/NetRender.git
 ```
-
 If you do not already have Python on your computer, you'll want to download the latest version [here](https://www.python.org/downloads/). I'm using version 3.6.5.
 
-
+The main dependency needed to run this script is [Plot.ly](https://plot.ly/), a free and open-source visualization library packaged into a Python module. This script generates temporary visualizations in your local environment, but with a few modifications you can save ~25 visualizations by signing up for a [free Plot.ly account](https://plot.ly/accounts/login/#/). This may be helpful if you plan to use Plot.ly again in the future, but isn't necessary because generated networks can be exported as PNGs from the browser.
 
 <br>
 
@@ -61,7 +59,3 @@ There are three example networks you can use to test this program.
     
 * **mouse_connectome.txt**
     * [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf)
-
-<br>
-
-### Saving Networks
