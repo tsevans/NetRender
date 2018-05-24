@@ -14,9 +14,7 @@ This project allows users to render interactive 3D networks in their browser usi
     - [Input Format](#input-format)
     - [Command-Line Options](#command-line-options)
     - [Examples](#examples)
-  * [Implementation](#implementation)
 
-<br>
 
 ## Installation
 To install, simply clone this repository using the following command: 
@@ -27,8 +25,6 @@ If you do not already have Python on your computer, you'll want to download the 
 
 The main dependency needed to run this script is [Plot.ly](https://plot.ly/), a free and open-source visualization library packaged into a Python module. This script generates temporary visualizations in your local environment, but with a few modifications you can save ~25 visualizations by signing up for a [free Plot.ly account](https://plot.ly/accounts/login/#/). This may be helpful if you plan to use Plot.ly again in the future, but isn't necessary because generated networks can be exported as PNGs from the browser.
 
-<br>
-
 ## Usage
 
 This program takes a single file as input and can be run using the command:
@@ -37,29 +33,19 @@ python netrender.py <input.txt>
 ```
 where `<input.txt>` is the name or relative path to the file you wish to visualize.
 
-<br>
-
 ### Input Format
 The input for the program is a standard edge list file following the usual format [`src_node` `dst_node` `weight`] on each line of the file. The program can accept as input a .txt file, with either tab-delimited or space-delimited values, or a .csv file following the aforementioned format.
 
 One important thing to note is that the program does not currently account for column headers in input files. Shown below are examples of incorrect and correct input files with headers and without headers, respectively:
 
-<center>
-
 *Incorrect:*                                                    |  *Correct:*
 :--------------------------------------------------------------:|:--------------------------------------------------------------:
 <img src="images/bad_input_file.png">  |  <img src="images/good_input_file.png">
 
-</center>
-
 If your input file has column headers, you'll want to delete them to avoid extraneous vertices in the network.
-
-<br>
 
 ### Command-Line Options
 
-
-<br>
 
 ### Examples
 There are three example networks you can use to test this program.
@@ -72,7 +58,3 @@ There are three example networks you can use to test this program.
     
 * **mouse_connectome.txt**
     * [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf)
-
-<br>
-
-## Implementation

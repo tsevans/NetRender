@@ -205,33 +205,11 @@ def render_network(graph, color_scale, vertices):
     py.plot(figure)
 
 
-def run_test(case):
-    """
-    Run one of the pre-made test cases when the -t option is passed from the command line.
-    :param case: Choice for test to run, should be pre-validated through command line.
-    """
-    if case == 'mouse':
-        graph, vertices = process_input('examples/mouse_connectome.txt')
-        render_network(graph, None, vertices)
-    elif case == 'cat':
-        graph, vertices = process_input('examples/cat_connectome.txt')
-        render_network(graph, None, vertices)
-    elif case == 'macaque':
-        graph, vertices = process_input('examples/macaque_connectome.txt')
-        render_network(graph, None, vertices)
-    else:
-        print('Error: Test not found!')
-    sys.exit(1)
-
-
 def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('filename',
                         nargs='+')
-    parser.add_argument('-t',
-                        help='test program on an existing connectome',
-                        choices=['mouse', 'cat', 'macaque'])
     parser.add_argument('-v',
                         help='increase output verbosity',
                         action='store_true')
@@ -240,9 +218,6 @@ def main():
                         type=str,
                         choices=['red', 'green', 'blue'])
     args = parser.parse_args()
-    if args.t is not None:
-        print(args.t)
-        run_test(args.t)
 
     graph, vertices = process_input(args.filename[0])
     render_network(graph, args.c, vertices)
