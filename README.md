@@ -9,6 +9,10 @@ This project allows users to render interactive 3D networks in their browser usi
 
 ## Table of Contents
   * [Installation](#installation)
+    - [Plot.ly](#plot.ly)
+    - [Python-igraph](#python-igraph)
+      - [Linux](#linux)
+      - [Windows](#windows)
   * [Usage](#usage)
     - [Input Format](#input-format)
     - [Command-Line Options](#command-line-options)
@@ -26,7 +30,9 @@ git clone https://github.com/tsevans/NetRender.git
 
 If you do not already have Python on your computer, you'll want to download the latest version [here](https://www.python.org/downloads/). I'm using version 3.6.5.
 
-<br>
+
+
+### *Plot.ly*
 
 The first dependency needed to run this script is [Plot.ly](https://plot.ly/), a free and open-source visualization library packaged into a Python module.
 This script generates temporary visualizations in your local environment, but with a few modifications you can save ~25 visualizations by signing up for a [free Plot.ly account](https://plot.ly/accounts/login/#/).
@@ -35,11 +41,15 @@ Install the plot.ly module with the following command:
 ```commandline
 pip install plotly
 ```
-<br>
+
+
+### *Python-igraph*
 
 The second dependency needed to run this script is [python-igraph](http://igraph.org/python/), a free and open-source collection of network analysis tools implemented as a C library with Python extensions.
 As with many other Python packages it may be tempting to use `pip install`; however, this method did not prove to be effective on any of the systems I tried.
 Luckily for you, I've already been down the rabbit hole of Stack Overflow posts on the issue and found solutions to install python-igraph on both Linux and Windows.
+
+##### *Linux*
 
 If you're running Linux the installation is simple, just run the following commands:
 ```commandline
@@ -48,6 +58,8 @@ sudo apt-get install python-igraph
 ```
 This worked when tested on both KDE and Ubuntu using the apt package manager.
 If you use another package manager or run any special configurations, the commands may need to be modified accordingly.
+
+##### *Windows*
 
 If you're running Windows there will be some additional steps in order to support C.
 
@@ -68,6 +80,12 @@ If you're running Windows there will be some additional steps in order to suppor
         ```commandline
         pip install python_igraph-0.7.1.post6-cp36-cp36m-win32.whl 
         ```
+        
+When installing wheel archives you might see an error like this:
+```diff
+- pycairo-1.16.3-cp27-cp27m-win32.whl is not a supported wheel on this platform.
+```
+In this case you will need to download the wheel corresponding to your version of Python.
 
 
 ## Usage
