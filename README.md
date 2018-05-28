@@ -49,7 +49,7 @@ The second dependency needed to run this script is [python-igraph](http://igraph
 As with many other Python packages it may be tempting to use `pip install`; however, this method did not prove to be effective on any of the systems I tried.
 Luckily for you, I've already been down the rabbit hole of Stack Overflow posts on the issue and found solutions to install python-igraph on both Linux and Windows.
 
-##### *Linux*
+#### *Linux*
 
 If you're running Linux the installation is simple, just run the following commands:
 ```commandline
@@ -59,22 +59,24 @@ sudo apt-get install python-igraph
 This worked when tested on both KDE and Ubuntu using the apt package manager.
 If you use another package manager or run any special configurations, the commands may need to be modified accordingly.
 
-##### *Windows*
+#### *Windows*
 
 If you're running Windows there will be some additional steps in order to support C.
 
-* Download and install the Microsoft Visual C++ Build Tools from [here](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017)
+* Download and install the [Microsoft Visual C++ Build Tools](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017)
     
-    * You should only need to check these two options on the installer <img src="images/build_tools.png">
+    * You should only need to check these two options on the installer 
+    
+    <img src="images/build_tools.png">
 
-* Download the wheel archive for Pycairo [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo)
+* Download the [wheel archive for Pycairo](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo)
     
     * Navigate to where the archive was saved and use `pip` to install the package. The command I used was
         ```commandline
         pip install pycairo-1.16.3-cp36-cp36m-win32.whl 
         ```
 
-* Download the wheel archive for Python-igraph [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-igraph)
+* Download the [wheel archive for Python-igraph](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-igraph)
     
     * Navigate to where the archive was saved and use `pip` to install the package. The command I used was
         ```commandline
