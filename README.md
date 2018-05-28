@@ -50,11 +50,24 @@ This worked when tested on both KDE and Ubuntu using the apt package manager.
 If you use another package manager or run any special configurations, the commands may need to be modified accordingly.
 
 If you're running Windows there will be some additional steps in order to support C.
-* Download the Microsoft Visual C++ Build Tools from [here](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017)
-* Do
 
+* Download and install the Microsoft Visual C++ Build Tools from [here](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017)
+    
+    * You should only need to check these two options on the installer <img src="images/build_tools.png">
 
+* Download the wheel archive for Pycairo [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo)
+    
+    * Navigate to where the archive was saved and use `pip` to install the package. The command I used was
+        ```commandline
+        pip install pycairo-1.16.3-cp36-cp36m-win32.whl 
+        ```
 
+* Download the wheel archive for Python-igraph [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-igraph)
+    
+    * Navigate to where the archive was saved and use `pip` to install the package. The command I used was
+        ```commandline
+        pip install python_igraph-0.7.1.post6-cp36-cp36m-win32.whl 
+        ```
 
 
 ## Usage
