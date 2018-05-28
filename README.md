@@ -19,6 +19,7 @@ This project allows users to render interactive 3D networks in their browser usi
     - [Examples](#examples)
   * [Implementation](#implementation)
 
+<br>
 
 ## Installation
 To install, simply clone this repository using the following command: 
@@ -26,11 +27,7 @@ To install, simply clone this repository using the following command:
 git clone https://github.com/tsevans/NetRender.git
 ```
 
-<br>
-
 If you do not already have Python on your computer, you'll want to download the latest version [here](https://www.python.org/downloads/). I'm using version 3.6.5.
-
-
 
 ### *Plot.ly*
 
@@ -41,7 +38,6 @@ Install the plot.ly module with the following command:
 ```commandline
 pip install plotly
 ```
-
 
 ### *Python-igraph*
 
@@ -66,8 +62,7 @@ If you're running Windows there will be some additional steps in order to suppor
 * Download and install the [Microsoft Visual C++ Build Tools](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017)
     
     * You should only need to check these two options on the installer 
-    
-    <img src="images/build_tools.png">
+      <img src="images/build_tools.png">
 
 * Download the [wheel archive for Pycairo](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo)
     
@@ -89,6 +84,7 @@ When installing wheel archives you might see an error like this:
 ```
 In this case you will need to download the wheel corresponding to your version of Python.
 
+<br>
 
 ## Usage
 
@@ -121,7 +117,8 @@ There are three example networks you can use to test this program.
     * From [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512) (Sporns and Zwi, 2004)
 * **mouse_connectome.txt**
     * From [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf) (Swanson, Hahn, & Sporns, 2017)
-    
+
+<br>    
 
 ## Implementation
 This section describes the structure of the NetRender program and various design decisions made during implementation.
