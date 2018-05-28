@@ -1,4 +1,3 @@
-import sys
 import argparse
 from binascii import crc32
 import igraph as ig

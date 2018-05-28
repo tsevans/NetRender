@@ -50,7 +50,8 @@ This worked when tested on both KDE and Ubuntu using the apt package manager.
 If you use another package manager or run any special configurations, the commands may need to be modified accordingly.
 
 If you're running Windows there will be some additional steps in order to support C.
-* Download the latest Visual C++ runtime
+* Download the Microsoft Visual C++ Build Tools from [here](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017)
+* Do
 
 
 
