@@ -72,14 +72,14 @@ If you're running Windows there will be some additional steps in order to suppor
 
 * Download the [wheel archive for Pycairo](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo)
     
-    * Use `pip` to install the package you downloaded. The command I used was:
+    * After downloading, install the package. The command I used was:
         ```commandline
         pip install pycairo-1.16.3-cp27-cp27m-win_amd64.whl 
         ```
 
 * Download the [wheel archive for Python-igraph](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-igraph)
     
-    * Use `pip` to install the package you downloaded. The command I used was:
+    * After downloading, install the package. The command I used was:
         ```commandline
         pip install python_igraph-0.7.1.post6-cp27-cp27m-win_amd64.whl 
         ```
