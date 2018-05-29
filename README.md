@@ -31,7 +31,9 @@ To install, simply clone this repository using the following command:
 git clone https://github.com/tsevans/NetRender.git
 ```
 
-If you do not already have Python on your computer, you'll want to download the latest version [here](https://www.python.org/downloads/). I'm using version 3.6.5.
+If you do not already have Python on your computer, you'll want to download that [here](https://www.python.org/downloads/). 
+Make sure to use Python **2.7** - I'm currently using version 2.7.15. 
+There was a compatibility issue with plot.ly and Python 3.6.5, so you'll want to make sure you're using the correct version.
 
 ### *Plot.ly*
 
@@ -61,7 +63,7 @@ If you use another package manager or run any special configurations, the comman
 
 #### *Windows*
 
-If you're running Windows there will be some additional steps in order to support C.
+If you're running Windows there will be some additional steps in order to support the C language requirements.
 
 * Download and install the [Microsoft Visual C++ Build Tools](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017)
     
@@ -70,23 +72,23 @@ If you're running Windows there will be some additional steps in order to suppor
 
 * Download the [wheel archive for Pycairo](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo)
     
-    * Navigate to where the archive was saved and use `pip` to install the package. The command I used was
+    * Use `pip` to install the package you downloaded. The command I used was:
         ```commandline
-        pip install pycairo-1.16.3-cp36-cp36m-win32.whl 
+        pip install pycairo-1.16.3-cp27-cp27m-win_amd64.whl 
         ```
 
 * Download the [wheel archive for Python-igraph](https://www.lfd.uci.edu/~gohlke/pythonlibs/#python-igraph)
     
-    * Navigate to where the archive was saved and use `pip` to install the package. The command I used was
+    * Use `pip` to install the package you downloaded. The command I used was:
         ```commandline
-        pip install python_igraph-0.7.1.post6-cp36-cp36m-win32.whl 
+        pip install python_igraph-0.7.1.post6-cp27-cp27m-win_amd64.whl 
         ```
         
 When installing wheel archives you might see an error like this:
 ```diff
 - pycairo-1.16.3-cp27-cp27m-win32.whl is not a supported wheel on this platform.
 ```
-In this case you will need to download the wheel corresponding to your version of Python.
+In this case you will need to download the correct wheel corresponding to your version of Python.
 
 <br>
 
