@@ -137,11 +137,11 @@ Yellow      | `python netrender.py examples/mouse_connectome.txt -c yellow` | <i
 ### *Examples*
 There are three example networks you can use to test this program.
 
-* **cat_connectome.txt**
+* **cat.txt**
     * From [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512) (Sporns and Zwi, 2004)
-* **macaque_connectome.txt**
+* **macaque.txt**
     * From [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512) (Sporns and Zwi, 2004)
-* **mouse_connectome.txt**
+* **mouse.txt**
     * From [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf) (Swanson, Hahn, & Sporns, 2017)
 
 <br>    
