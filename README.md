@@ -33,7 +33,7 @@ git clone https://github.com/tsevans/NetRender.git
 
 If you do not already have Python on your computer, you'll want to download that [here](https://www.python.org/downloads/). 
 Make sure to use Python **2.7** - I'm currently using version 2.7.15. 
-There was a compatibility issue with plot.ly and Python 3.6.5, so you'll want to make sure you're using the correct version.
+There was a compatibility issue with plot.ly and Python 3.6.5, so you'll want to make sure you're using the correct version of Python.
 
 ### *Plot.ly*
 
@@ -120,6 +120,19 @@ Runs program with verbosity to print general information about the network and e
 
 #### *-c {red | green | blue | yellow | pink}*
 Changes the color scale of the vertices.
+Vertex colors are determined based on a hashed value of it's assigned name. 
+By default, the colors aren't very appealing and usually span somewhere in the range of orange, brown, or olive green.
+Below are examples of each color option when applied to the mouse connectome.
+
+Color       | Command                                                       | Rendering
+:----------:|:--------------------------------------------------------------|:---------------------------------:
+Default     | `python netrender.py examples/mouse_connectome.txt`           | <img src="images/color_default.png">
+Red         | `python netrender.py examples/mouse_connectome.txt -c red`    | <img src="images/color_red.png">
+Green       | `python netrender.py examples/mouse_connectome.txt -c green`  | <img src="images/color_green.png">
+Blue        | `python netrender.py examples/mouse_connectome.txt -c blue`   | <img src="images/color_blue.png">
+Pink        | `python netrender.py examples/mouse_connectome.txt -c pink`   | <img src="images/color_pink.png">
+Yellow      | `python netrender.py examples/mouse_connectome.txt -c yellow` | <img src="images/color_yellow.png">
+
 
 ### *Examples*
 There are three example networks you can use to test this program.
