@@ -1,8 +1,21 @@
+from __future__ import division
 import argparse
 from binascii import crc32
 import igraph as ig
 import plotly.offline as py
 from plotly.graph_objs import *
+
+verbose = False
+
+
+def vprint(str):
+    """
+    Print wrapper to handle -v (verbose) option from command-line.
+    :param str: Contents to be printed.
+    """
+    global verbose
+    if verbose:
+        print(str)
 
 
 def process_input(input_path):
@@ -49,8 +62,8 @@ def process_input(input_path):
     vertices = vertex_map.keys()
 
     # Print graph information
-    print(str(len(vertices)) + ' vertices')
-    print(str(len(edges)) + ' edges')
+    vprint(str(len(vertices)) + ' vertices')
+    vprint(str(len(edges)) + ' edges')
 
     # Build IGraph representation of network
     graph = ig.Graph(edges, directed=False)
@@ -152,6 +165,10 @@ def render_network(graph, color_scale, vertices):
             color += '%s,255,%s)' % (c[0], c[2])
         elif color_scale == 'blue':
             color += '%s,%s,255)' % (c[0], c[1])
+        elif color_scale == 'yellow':
+            color += '255,255,%s)' % c[2]
+        elif color_scale == 'pink':
+            color += '255,%s,255)' % c[1]
         colors.append(color)
 
     # Build plot.ly trace for vertices
@@ -201,7 +218,10 @@ def render_network(graph, color_scale, vertices):
 
     data = Data([e_trace, v_trace])
     figure = Figure(data=data, layout=layt)
-    py.plot(figure)
+    try:
+        py.plot(figure)
+    except TypeError:
+        print('Incompatible version - Try using Python 2.7')
 
 
 def main():
@@ -215,8 +235,11 @@ def main():
     parser.add_argument('-c',
                         help='change color scale of network',
                         type=str,
-                        choices=['red', 'green', 'blue'])
+                        choices=['red', 'green', 'blue', 'yellow', 'pink'])
     args = parser.parse_args()
+
+    global verbose
+    verbose = args.v
 
     graph, vertices = process_input(args.filename[0])
     render_network(graph, args.c, vertices)

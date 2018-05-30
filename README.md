@@ -112,7 +112,14 @@ One important thing to note is that the program does not currently account for c
 If your input file has column headers, you'll want to delete them to avoid extraneous vertices in the network.
 
 ### *Command-Line Options*
+#### *-h, --help*
+Prints the help dialog explaining how to run the program.
 
+#### *-v*
+Runs program with verbosity to print general information about the network and execution.
+
+#### *-c {red | green | blue | yellow | pink}*
+Changes the color scale of the vertices.
 
 ### *Examples*
 There are three example networks you can use to test this program.
