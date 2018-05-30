@@ -126,12 +126,12 @@ Below are examples of each color option when applied to the mouse connectome.
 
 Color       | Command                                                       | Rendering
 :----------:|:--------------------------------------------------------------|:---------------------------------:
-Default     | `python netrender.py examples/mouse_connectome.txt`           | <img src="images/color_default.png">
-Red         | `python netrender.py examples/mouse_connectome.txt -c red`    | <img src="images/color_red.png">
-Green       | `python netrender.py examples/mouse_connectome.txt -c green`  | <img src="images/color_green.png">
-Blue        | `python netrender.py examples/mouse_connectome.txt -c blue`   | <img src="images/color_blue.png">
-Pink        | `python netrender.py examples/mouse_connectome.txt -c pink`   | <img src="images/color_pink.png">
-Yellow      | `python netrender.py examples/mouse_connectome.txt -c yellow` | <img src="images/color_yellow.png">
+Default     | `python netrender.py examples/mouse.txt`           | <img src="images/color_default.png">
+Red         | `python netrender.py examples/mouse.txt -c red`    | <img src="images/color_red.png">
+Green       | `python netrender.py examples/mouse.txt -c green`  | <img src="images/color_green.png">
+Blue        | `python netrender.py examples/mouse.txt -c blue`   | <img src="images/color_blue.png">
+Pink        | `python netrender.py examples/mouse.txt -c pink`   | <img src="images/color_pink.png">
+Yellow      | `python netrender.py examples/mouse.txt -c yellow` | <img src="images/color_yellow.png">
 
 
 ### *Examples*
