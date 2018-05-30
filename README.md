@@ -9,7 +9,7 @@ Dr. Murali mentioned that the visualization of a network in the shape of the bra
 This project allows users to render interactive 3D networks in their browser using Python without the need for excessive dependencies. 
 My goal is that future CS 4984 can use this program to help understand their assignments and make cool images for presentations.
 
-<br>
+<br> <!-- ############################################################################################################################################################################################################################################################################################### -->
 
 ## Table of Contents
   * [Installation](#installation)
@@ -23,7 +23,7 @@ My goal is that future CS 4984 can use this program to help understand their ass
     - [Examples](#examples)
   * [Implementation](#implementation)
 
-<br>
+<br> <!-- ############################################################################################################################################################################################################################################################################################### -->
 
 ## Installation
 To install, simply clone this repository using the following command: 
@@ -90,7 +90,7 @@ When installing wheel archives you might see an error like this:
 ```
 In this case you will need to download the correct wheel corresponding to your version of Python.
 
-<br>
+<br> <!-- ############################################################################################################################################################################################################################################################################################### -->
 
 ## Usage
 
@@ -147,7 +147,7 @@ There are three example networks in the `data/` directory that you can use to te
     * [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf)
         * Swanson, Hahn, & Sporns (2017)
 
-<br>    
+<br> <!-- ############################################################################################################################################################################################################################################################################################### -->
 
 ## Implementation
 This section describes the structure of the NetRender program and various design decisions made during implementation.
