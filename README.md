@@ -138,11 +138,14 @@ Yellow      | `python netrender.py data/mouse.txt -c yellow` | <img src="images/
 There are three example networks in the `data/` directory that you can use to test this program.
 
 * **cat.txt**
-    * From [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512) (Sporns and Zwi, 2004)
+    * [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512)
+        * Sporns and Zwi (2004)
 * **macaque.txt**
-    * From [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512) (Sporns and Zwi, 2004)
+    * [_The Small World of the Cerebral Cortex_](https://www.ncbi.nlm.nih.gov/pubmed/15319512)
+        * Sporns and Zwi (2004)
 * **mouse.txt**
-    * From [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf) (Swanson, Hahn, & Sporns, 2017)
+    * [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf)
+        * Swanson, Hahn, & Sporns (2017)
 
 <br>    
 
