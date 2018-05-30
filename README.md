@@ -120,7 +120,7 @@ Runs program with verbosity to print general information about the network and e
 
 #### *-c {red | green | blue | yellow | pink}*
 Changes the color scale of the vertices.
-Vertex colors are determined based on a hashed value of it's assigned name. 
+Vertex colors are determined based on a hashed value of their assigned names. 
 By default, the colors aren't very appealing and usually span somewhere in the range of orange, brown, or olive green.
 Below are examples of each color option when applied to the mouse connectome.
 
