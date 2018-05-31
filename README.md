@@ -21,6 +21,7 @@ My goal is that future CS 4984 can use this program to help understand their ass
     - [Input Format](#input-format)
     - [Command-Line Options](#command-line-options)
     - [Examples](#examples)
+    - [Output](#output)
   * [Implementation](#implementation)
 
 <br> <!-- ############################################################################################################################################################################################################################################################################################### -->
@@ -133,7 +134,6 @@ Blue        | `python netrender.py data/mouse.txt -c blue`   | <img src="images/
 Pink        | `python netrender.py data/mouse.txt -c pink`   | <img src="images/color_pink.png" height="280" width="280">
 Yellow      | `python netrender.py data/mouse.txt -c yellow` | <img src="images/color_yellow.png" height="280" width="280">
 
-
 ### *Examples*
 There are three example networks in the `data/` directory that you can use to test this program.
 
@@ -146,6 +146,9 @@ There are three example networks in the `data/` directory that you can use to te
 * **mouse.txt**
     * [_Organizing principles for the cerebral cortex network of commissural and association connections_](http://www.pnas.org/content/pnas/114/45/E9692.full.pdf)
         * Swanson, Hahn, & Sporns (2017)
+
+### *Output*
+Expand on: opening in browser, export as png, add command line option to save html files
 
 <br> <!-- ############################################################################################################################################################################################################################################################################################### -->
 
