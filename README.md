@@ -152,6 +152,6 @@ There are three example networks in the `data/` directory that you can use to te
 ## Implementation
 This section describes the structure of the NetRender program and various design decisions made during implementation.
 
-The [python-igraph](http://igraph.org/python/) library is neede d for it's unique 3D variation of the [Kamada-Kawai](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.387.7401&rep=rep1&type=pdf) force-directed layout algorithm for undirected graphs.
+The [python-igraph](http://igraph.org/python/) library is needed for it's unique 3D variation of the [Kamada-Kawai](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.387.7401&rep=rep1&type=pdf) force-directed layout algorithm for undirected graphs.
 The algorithm maps each vertex to a tuple of (x,y,z) coordinates, which is piped plot.ly's [3D Scatter Plot layout](https://plot.ly/python/3d-scatter-plots/). 
  
