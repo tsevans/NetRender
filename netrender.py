@@ -1,4 +1,5 @@
 from __future__ import division
+import time
 import argparse
 from binascii import crc32
 import igraph as ig
@@ -8,14 +9,14 @@ from plotly.graph_objs import *
 verbose = False
 
 
-def vprint(str):
+def vprint(string):
     """
     Print wrapper to handle -v (verbose) option from command-line.
-    :param str: Contents to be printed.
+    :param string: Contents to be printed.
     """
     global verbose
     if verbose:
-        print(str)
+        print(string)
 
 
 def process_input(input_path):
@@ -142,10 +143,11 @@ def hash_colors(vertex):
     return hsl_to_rgb(raw_hsl)
 
 
-def render_network(graph, color_scale, vertices):
+def render_network(graph, filename, color_scale, vertices):
     """
     Render network in three-dimensional space.
     :param graph: IGraph representation of input network.
+    :param filename: Name of input file to display on rendering.
     :param color_scale:
     :param vertices:
     """
@@ -207,7 +209,7 @@ def render_network(graph, color_scale, vertices):
     # Build plot.ly layout
     axis = dict(showbackground=False, showline=False, zeroline=False, showgrid=False, showticklabels=False, title='')
     layt = Layout(
-        title="3D Visualization of Brain Network",
+        title="3D Visualization of "+filename,
         showlegend=False,
         scene=Scene(
             xaxis=XAxis(axis),
@@ -238,13 +240,27 @@ def main():
                         choices=['red', 'green', 'blue', 'yellow', 'pink'])
     args = parser.parse_args()
 
+    # Set verbosity level of execution
     global verbose
     verbose = args.v
 
-    graph, vertices = process_input(args.filename[0])
-    render_network(graph, args.c, vertices)
-    pass
+    filename = args.filename[0]  # Full path of input file
+    raw_name = str(filename).split('/')[-1]  # Raw name of input file (path ignored)
+
+    # Nicely-formatted printing of file name for verbose execution
+    underline = '+----------'
+    for x in range(len(raw_name)):
+        underline += '-'
+    vprint(underline+'+')
+    vprint(' Rendering ' + raw_name + ' ')
+    vprint(underline+'+')
+
+    # Process input file and render network
+    graph, vertices = process_input(filename)
+    render_network(graph, raw_name, args.c, vertices)
 
 
 if __name__ == '__main__':
+    start_time = time.time()
     main()
+    vprint('\nRendering took %.3f seconds' % (time.time() - start_time))

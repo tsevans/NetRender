@@ -117,7 +117,7 @@ If your input file has column headers, you'll want to delete them to avoid extra
 Prints the help dialog explaining how to run the program.
 
 #### *-v*
-Runs program with verbosity to print general information about the network and execution.
+Runs program with verbosity to print number of vertices and edges in the network and run time of execution.
 
 #### *-c {red | green | blue | yellow | pink}*
 Changes the color scale of the vertices.
