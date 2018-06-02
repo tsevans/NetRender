@@ -5,7 +5,8 @@
 
 I wrote this script in Spring 2018 while taking [CS 4984: Computing The Brain](http://courses.cs.vt.edu/cs4984/2018-spring-computing-the-brain/) Capstone, taught by [T.M. Murali](http://bioinformatics.cs.vt.edu/~murali/), at Virginia Tech. 
 Many of the assignments involved analysis of large-scale brain networks, which proved to be difficult without a visual point of reference. 
-Dr. Murali mentioned that the visualization of a network in the shape of the brain would make a great addition to my semester project, but all of the open-source tools I tried (such as [cvu](https://github.com/aestrivex/cvu) and [flexbgv](https://sourceforge.net/projects/flexbgv/)) required huge dependencies and custom file formats without much documentation.
+Dr. Murali mentioned that the visualization of a network in the shape of the brain would make a great addition to my semester project, but all of the open-source tools I tried (such as [cvu](https://github.com/aestrivex/cvu) and [flexbgv](https://sourceforge.net/projects/flexbgv/)) were outdated, and required large dependencies or custom file formats without sufficient documentation.
+At times it felt like I had to put more work into configuring visualizations than actually focusing on important neuroscience concepts and graph algorithms.
 This project allows users to render interactive 3D networks in their browser using Python without the need for excessive dependencies. 
 My goal is that future CS 4984 can use this program to help understand their assignments and make cool images for presentations.
 
@@ -148,6 +149,7 @@ There are three example networks in the `data/` directory that you can use to te
         * Swanson, Hahn, & Sporns (2017)
 
 ### *Output*
+When the program is executed, the rendering will 
 Expand on: opening in browser, export as png, add command line option to save html files
 
 <br> <!-- ############################################################################################################################################################################################################################################################################################### -->
