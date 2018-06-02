@@ -128,12 +128,12 @@ Below are examples of each color option when applied to the mouse connectome.
 
 Color       | Command                                                       | Rendering
 :----------:|:--------------------------------------------------------------|:---------------------------------:
-Default     | `python netrender.py data/mouse.txt`           | <img src="images/color_default.png" height="140" width="140">
-Red         | `python netrender.py data/mouse.txt -c red`    | <img src="images/color_red.png" height="140" width="140">
-Green       | `python netrender.py data/mouse.txt -c green`  | <img src="images/color_green.png" height="140" width="140">
-Blue        | `python netrender.py data/mouse.txt -c blue`   | <img src="images/color_blue.png" height="140" width="140">
-Pink        | `python netrender.py data/mouse.txt -c pink`   | <img src="images/color_pink.png" height="140" width="140">
-Yellow      | `python netrender.py data/mouse.txt -c yellow` | <img src="images/color_yellow.png" height="140" width="140">
+Default     | `python netrender.py data/mouse.txt`           | <img src="images/color_default.png" height="220" width="220">
+Red         | `python netrender.py data/mouse.txt -c red`    | <img src="images/color_red.png" height="220" width="220">
+Green       | `python netrender.py data/mouse.txt -c green`  | <img src="images/color_green.png" height="220" width="220">
+Blue        | `python netrender.py data/mouse.txt -c blue`   | <img src="images/color_blue.png" height="220" width="220">
+Pink        | `python netrender.py data/mouse.txt -c pink`   | <img src="images/color_pink.png" height="220" width="220">
+Yellow      | `python netrender.py data/mouse.txt -c yellow` | <img src="images/color_yellow.png" height="220" width="220">
 
 ### *Examples*
 There are three example networks in the `data/` directory that you can use to test this program.
